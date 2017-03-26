@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+
+</head>
+
+<body>
+
+<div id="contact_section" ng-app="myApp" ng-controller="myCtrl">
+    
+			#Correct: {{correct}}<br><br>
+           	Question: {{randomQuestion}}
+			<br><br>
+			<label>
+			
+				<input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Addition">
+				Addition
+				</label><br/>
+				<input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Subtraction">
+				Subtraction
+				</label><br/>
+				<input type="radio" ng-model="value" ng-change="nextQuestion()" name="question" value="Multiplication">
+				Multiplication
+				</label><br/><br/>
+				<input type="radio" ng-model="value1" ng-change="nextQuestion()" name="difficulty" value="Easy">
+				Easy
+				</label><br/>
+				<input type="radio" ng-model="value1" ng-change="nextQuestion()" name="difficulty" value="Hard">
+				Hard
+				</label><br/><br/>
+				
+<label>
+Answer:
+<input type="text" id="answerName">
+</label><br/><br/>
+<button ng-click="submitAnswer()">Submit</button>
+</div>
+</body>
+</html>
